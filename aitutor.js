@@ -10,10 +10,10 @@ function laadknoppenstartpagina(){
     ${linkerkolom()}
     <div class="col-lg-8">
         <div class="row">
-        <div class="col-lg-3"><button class="btn btnown" onclick="naarpagina('samenvatting.html')">Samenvatting Cursus</button></div>
-        <div class="col-lg-3"><button class="btn btnown" onclick="naarpagina('quiz.html')">ExamenTraining Meerkeuze</button></div>
-        <div class="col-lg-3"><button class="btn btnown" onclick="naarpagina('chatraw.html')">ChatGPT Raw</button></div>
-        <div class="col-lg-3"><button class="btn btnown" onclick="naarpagina('onderwerpen.html')">AI antwoorden op de belangrijkste onderwerpen</button></div>
+        <div class="col-lg-3"><button class="btn btnown" onclick="naarpagina('samenvatting.html')">AI Samenvatting</button></div>
+        <div class="col-lg-3"><button class="btn btnown" onclick="naarpagina('quiz.html')">AI ExamenTraining</button></div>
+        <div class="col-lg-3"><button class="btn btnown" onclick="naarpagina('chatraw.html')">AI Chat Raw</button></div>
+        <div class="col-lg-3"><button class="btn btnown" onclick="naarpagina('onderwerpen.html')">AI Toelichting</button></div>
         </div>
     </div>
     ${rechterkolom()}
