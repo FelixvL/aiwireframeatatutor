@@ -60,11 +60,7 @@ function laadquiz(){
     ${linkerkolom()}
     <div class="col-lg-8 paginaBody">
         ${toonPaginaTitel("Quiz")}
-        <div>Vraag1</div>
-        <div>Antwoord A</div>
-        <div>Antwoord B</div>
-        <div>Antwoord C</div>
-        <div>Antwoord D</div>
+        ${toonVraag(0)}
     </div>
     ${rechterkolom()}
     `;
@@ -112,7 +108,7 @@ function laadsamenvatting(){
     `;
 }
 function leguitknop(){
-    return `<button class="btn btnown">leg me meer uit</button>`
+    return `<button class="btn btnown" onclick="geefToelichting()">leg me meer uit</button>`
 }
 function toonPaginaTitel(paginaTitel){
     return `<h1 class="paginaTitel">${paginaTitel}</h1>`;
@@ -130,4 +126,46 @@ function toonChatTabel(vraag,antwoord){
         </table>
     </div>
     `
+}
+function toonVraag(nr){
+    return `
+    <div class="vraag">${vraag(nr)}</div>
+    <div class="antwoord">A - ${antwoordA(nr)} ${knop('kies', 0)}</div>
+    <div class="antwoord">B - ${antwoordB(nr)} ${knop('kies', 0)}</div>
+    <div class="antwoord">C - ${antwoordC(nr)} ${knop('kies', 0)}</div>
+    <div class="antwoord">D - ${antwoordD(nr)} ${knop('kies', 0)}</div>
+    `;
+}
+function vraag(nr){
+    vraag=[
+        'Wat is de derde dag van de maand',
+    ];
+    return vraag[nr];
+}
+function antwoordA(nr){
+    antwoordA=[
+        'Maandag',
+    ];
+    return antwoordA[nr];
+}
+function antwoordB(nr){
+    antwoordB=[
+        'Dinsdag',
+    ];
+    return antwoordB[nr];
+}
+function antwoordC(nr){
+    antwoordC=[
+        'Woensdag',
+    ];
+    return antwoordC[nr];
+}
+function antwoordD(nr){
+    antwoordD=[
+        'Donderdag',
+    ];
+    return antwoordD[nr];
+}
+function knop(label, optie){
+    return `<button class="btn btnown" onclick="toonAntwoord()">${label}</button>`;
 }
