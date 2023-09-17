@@ -24,3 +24,10 @@ textarea.form-control{
     width: 80%;
     margin: 14px;
 }
+.vraag{
+    font-size: xx-large;
+}
+.antwoord{
+    font-size: large;
+    margin-left:25px;
+}
